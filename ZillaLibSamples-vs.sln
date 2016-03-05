@@ -1,0 +1,97 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2012
+VisualStudioVersion = 14.0.0.0
+MinimumVisualStudioVersion = 12.0.0.0
+Project("{F784C5B6-7301-EAA6-83F5-654BA187EC1D}") = "ZillaLibSamples", "ZillaLibSamples-vs.vcxproj", "{18D0229D-2CEF-9BE9-871F-84DB99F90690}"
+EndProject
+Project("{F784C5B6-7301-EAA6-83F5-654BA187EC1D}") = "ZillaLib", "../ZillaLib/ZillaLib-vs.vcxproj", "{2177A217-7A21-77A2-177A-2177A2177777}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+		Android-Debug|Win32 = Android-Debug|Win32
+		Android-Debug|x64 = Android-Debug|x64
+		Android-Release|Win32 = Android-Release|Win32
+		Android-Release|x64 = Android-Release|x64
+		Emscripten-Debug|Win32 = Emscripten-Debug|Win32
+		Emscripten-Debug|x64 = Emscripten-Debug|x64
+		Emscripten-Release|Win32 = Emscripten-Release|Win32
+		Emscripten-Release|x64 = Emscripten-Release|x64
+		NACL-Debug|Win32 = NACL-Debug|Win32
+		NACL-Debug|x64 = NACL-Debug|x64
+		NACL-Release|Win32 = NACL-Release|Win32
+		NACL-Release|x64 = NACL-Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Debug|Win32.ActiveCfg = Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Debug|Win32.Build.0 = Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Release|Win32.ActiveCfg = Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Release|Win32.Build.0 = Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Debug|x64.ActiveCfg = Debug|x64
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Debug|x64.Build.0 = Debug|x64
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Release|x64.ActiveCfg = Release|x64
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Release|x64.Build.0 = Release|x64
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Android-Debug|Win32.ActiveCfg = Android-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Android-Debug|Win32.Build.0 = Android-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Android-Debug|x64.ActiveCfg = Android-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Android-Debug|x64.Build.0 = Android-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Android-Release|Win32.ActiveCfg = Android-Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Android-Release|Win32.Build.0 = Android-Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Android-Release|x64.ActiveCfg = Android-Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Android-Release|x64.Build.0 = Android-Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Emscripten-Debug|Win32.ActiveCfg = Emscripten-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Emscripten-Debug|Win32.Build.0 = Emscripten-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Emscripten-Debug|x64.ActiveCfg = Emscripten-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Emscripten-Debug|x64.Build.0 = Emscripten-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Emscripten-Release|Win32.ActiveCfg = Emscripten-Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Emscripten-Release|Win32.Build.0 = Emscripten-Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Emscripten-Release|x64.ActiveCfg = Emscripten-Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.Emscripten-Release|x64.Build.0 = Emscripten-Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.NACL-Debug|Win32.ActiveCfg = NACL-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.NACL-Debug|Win32.Build.0 = NACL-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.NACL-Debug|x64.ActiveCfg = NACL-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.NACL-Debug|x64.Build.0 = NACL-Debug|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.NACL-Release|Win32.ActiveCfg = NACL-Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.NACL-Release|Win32.Build.0 = NACL-Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.NACL-Release|x64.ActiveCfg = NACL-Release|Win32
+		{18D0229D-2CEF-9BE9-871F-84DB99F90690}.NACL-Release|x64.Build.0 = NACL-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Debug|Win32.Build.0 = Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Release|Win32.ActiveCfg = Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Release|Win32.Build.0 = Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Debug|x64.ActiveCfg = Debug|x64
+		{2177A217-7A21-77A2-177A-2177A2177777}.Debug|x64.Build.0 = Debug|x64
+		{2177A217-7A21-77A2-177A-2177A2177777}.Release|x64.ActiveCfg = Release|x64
+		{2177A217-7A21-77A2-177A-2177A2177777}.Release|x64.Build.0 = Release|x64
+		{2177A217-7A21-77A2-177A-2177A2177777}.Android-Debug|Win32.ActiveCfg = Android-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Android-Debug|Win32.Build.0 = Android-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Android-Debug|x64.ActiveCfg = Android-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Android-Debug|x64.Build.0 = Android-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Android-Release|Win32.ActiveCfg = Android-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Android-Release|Win32.Build.0 = Android-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Android-Release|x64.ActiveCfg = Android-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Android-Release|x64.Build.0 = Android-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Emscripten-Debug|Win32.ActiveCfg = Emscripten-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Emscripten-Debug|Win32.Build.0 = Emscripten-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Emscripten-Debug|x64.ActiveCfg = Emscripten-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Emscripten-Debug|x64.Build.0 = Emscripten-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Emscripten-Release|Win32.ActiveCfg = Emscripten-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Emscripten-Release|Win32.Build.0 = Emscripten-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Emscripten-Release|x64.ActiveCfg = Emscripten-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.Emscripten-Release|x64.Build.0 = Emscripten-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.NACL-Debug|Win32.ActiveCfg = NACL-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.NACL-Debug|Win32.Build.0 = NACL-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.NACL-Debug|x64.ActiveCfg = NACL-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.NACL-Debug|x64.Build.0 = NACL-Debug|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.NACL-Release|Win32.ActiveCfg = NACL-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.NACL-Release|Win32.Build.0 = NACL-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.NACL-Release|x64.ActiveCfg = NACL-Release|Win32
+		{2177A217-7A21-77A2-177A-2177A2177777}.NACL-Release|x64.Build.0 = NACL-Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

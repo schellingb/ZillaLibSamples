@@ -1,0 +1,176 @@
+// !$*UTF8*$!
+{ archiveVersion = 1; classes = { }; objectVersion = 46; objects = {
+
+	101001 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "01-empty-game.inl"; sourceTree = "<group>"; };
+	101002 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "02-scene-manager-with-a-single-scene.inl"; sourceTree = "<group>"; };
+	101003 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "03-scene-manager-with-two-scenes.inl"; sourceTree = "<group>"; };
+	101004 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "04-scene-manager-with-crossfade.inl"; sourceTree = "<group>"; };
+	101005 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "05-2d-geometry-drawing.inl"; sourceTree = "<group>"; };
+	101006 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "06-input-and-other-events.inl"; sourceTree = "<group>"; };
+	101007 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "07-surface-loading-and-drawing.inl"; sourceTree = "<group>"; };
+	101008 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "08-rotating-and-scaling-surfaces.inl"; sourceTree = "<group>"; };
+	101009 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "09-surface-batch-rendering.inl"; sourceTree = "<group>"; };
+	101010 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "10-surface-with-repeating-texture.inl"; sourceTree = "<group>"; };
+	101011 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "11-tiled-texture-surfaces.inl"; sourceTree = "<group>"; };
+	101012 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "12-font-rendering.inl"; sourceTree = "<group>"; };
+	101013 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "13-easing.inl "; sourceTree = "<group>"; };
+	101014 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "14-timer.inl *"; sourceTree = "<group>"; };
+	101015 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "15-collision-tests.inl"; sourceTree = "<group>"; };
+	101016 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "16-post-process-effect.inl"; sourceTree = "<group>"; };
+	101017 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "17-surface-shader.inl"; sourceTree = "<group>"; };
+	101018 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "18-render-clipping.inl"; sourceTree = "<group>"; };
+	101019 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "19-render-to-texture.inl"; sourceTree = "<group>"; };
+	101020 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "20-sound-samples.inl"; sourceTree = "<group>"; };
+	101021 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "21-ImcSynthesizer-Sound.inl"; sourceTree = "<group>"; };
+	101022 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "22-particles.inl"; sourceTree = "<group>"; };
+	101023 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "23-networking-clientserver.inl"; sourceTree = "<group>"; };
+	101024 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "24-networking-http.inl"; sourceTree = "<group>"; };
+	101025 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "25-saving-loading-settings.inl"; sourceTree = "<group>"; };
+	101026 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "26-open-web-link.inl"; sourceTree = "<group>"; };
+	101027 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "27-json-read-write.inl"; sourceTree = "<group>"; };
+	101028 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "28-advanced-polygon.inl"; sourceTree = "<group>"; };
+	101029 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "29-blend-modes.inl"; sourceTree = "<group>"; };
+	101030 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "30-simple-game.inl"; sourceTree = "<group>"; };
+
+	202001 = { isa = PBXBuildFile; fileRef = 201001; }; 201001 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "ZillaLibSampleMain.cpp"; sourceTree = "<group>"; };
+
+	302001 = { isa = PBXBuildFile; fileRef = 301001; }; 301001 = { isa = PBXFileReference; lastKnownFileType = folder; path = "Data"; sourceTree = "<group>"; };
+
+	402001 = { isa = PBXBuildFile; fileRef = 401001; }; 401001 = { isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon.png"; path = "ZillaLibSamples-iOS.xcodeproj/Icon.png"; sourceTree = "<group>"; };
+	402002 = { isa = PBXBuildFile; fileRef = 401002; }; 401002 = { isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "ZillaLibSamples-iOS.xcodeproj/Icon-72.png"; sourceTree = "<group>"; };
+	402003 = { isa = PBXBuildFile; fileRef = 401003; }; 401003 = { isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-114.png"; path = "ZillaLibSamples-iOS.xcodeproj/Icon-114.png"; sourceTree = "<group>"; };
+	402004 = { isa = PBXBuildFile; fileRef = 401004; }; 401004 = { isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-144.png"; path = "ZillaLibSamples-iOS.xcodeproj/Icon-144.png"; sourceTree = "<group>"; };
+	402005 = { isa = PBXBuildFile; fileRef = 401005; }; 401005 = { isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "ZillaLibSamples-iOS.xcodeproj/Icon-60@2x.png"; sourceTree = "<group>"; };
+	402006 = { isa = PBXBuildFile; fileRef = 401006; }; 401006 = { isa = PBXFileReference; lastKnownFileType = image.png; name = "Default.png"; path = "ZillaLibSamples-iOS.xcodeproj/Default.png"; sourceTree = "<group>"; };
+	402007 = { isa = PBXBuildFile; fileRef = 401007; }; 401007 = { isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "ZillaLibSamples-iOS.xcodeproj/Default@2x.png"; sourceTree = "<group>"; };
+	402008 = { isa = PBXBuildFile; fileRef = 401008; }; 401008 = { isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "ZillaLibSamples-iOS.xcodeproj/Default-568h@2x.png"; sourceTree = "<group>"; };
+	402009 = { isa = PBXBuildFile; fileRef = 401009; }; 401009 = { isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x.png"; path = "ZillaLibSamples-iOS.xcodeproj/Default-Landscape@2x.png"; sourceTree = "<group>"; };
+	402010 = { isa = PBXBuildFile; fileRef = 401010; }; 401010 = { isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "ZillaLibSamples-iOS.xcodeproj/Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+	402011 = { isa = PBXBuildFile; fileRef = 401011; }; 401011 = { isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "ZillaLibSamples-iOS.xcodeproj/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+
+	502001 = { isa = PBXBuildFile; fileRef = 501001; }; 501001 = { isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+	502002 = { isa = PBXBuildFile; fileRef = 501002; }; 501002 = { isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+	502003 = { isa = PBXBuildFile; fileRef = 501003; }; 501003 = { isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+	502004 = { isa = PBXBuildFile; fileRef = 501004; }; 501004 = { isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+	502005 = { isa = PBXBuildFile; fileRef = 501005; }; 501005 = { isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+	502006 = { isa = PBXBuildFile; fileRef = 501006; }; 501006 = { isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+	502007 = { isa = PBXBuildFile; fileRef = 501007; }; 501007 = { isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+	502008 = { isa = PBXBuildFile; fileRef = 501008; }; 501008 = { isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+	502009 = { isa = PBXBuildFile; fileRef = 501009; }; 501009 = { isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+	502010 = { isa = PBXBuildFile; fileRef = 501010; }; 501010 = { isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+	502011 = { isa = PBXBuildFile; fileRef = 501011; }; 501011 = { isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+
+	600001 = { isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ZillaLib-iOS.xcodeproj"; path = "../ZillaLib/ZillaLib-iOS.xcodeproj"; sourceTree = SOURCE_ROOT; };
+	600002 = { isa = PBXReferenceProxy; fileType = archive.ar; path = "libZillaLib.a"; remoteRef = 600004; sourceTree = BUILT_PRODUCTS_DIR; };
+	600003 = { isa = PBXBuildFile; fileRef = 600002; };
+	600004 = { isa = PBXContainerItemProxy; containerPortal = 600001; proxyType = 2; remoteGlobalIDString = 2177A2177A2177A2177A0023; remoteInfo = "ZillaLib"; };
+	600005 = { isa = PBXContainerItemProxy; containerPortal = 600001; proxyType = 1; remoteGlobalIDString = 2177A2177A2177A2177A0022; remoteInfo = "ZillaLib"; };
+	600006 = { isa = PBXTargetDependency; name = "ZillaLib"; targetProxy = 600005; };
+
+	700000 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "ZillaLibSamples-iOS.xcodeproj/Info.plist"; sourceTree = "<group>"; };
+	800000 = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZillaLibSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+
+	A00001 = { isa = PBXGroup; name = Products; children = (800000); sourceTree = "<group>"; };
+	A00002 = { isa = PBXGroup; name = Sources; children = (101001,101002,101003,101004,101005,101006,101007,101008,101009,101010,101011,101012,101013,101014,101015,101016,101017,101018,101019,101020,101021,101022,101023,101024,101025,101026,101027,101028,101029,101030,201001); sourceTree = "<group>"; };
+	A00003 = { isa = PBXGroup; name = Resources; children = (301001,401001,401002,401003,401004,401005,401006,401007,401008,401009,401010,401011); sourceTree = "<group>"; };
+	A00004 = { isa = PBXGroup; name = Frameworks; children = (501001,501002,501003,501004,501005,501006,501007,501008,501009,501010,501011); sourceTree = "<group>"; };
+	A00005 = { isa = PBXGroup; name = CustomTemplate; children = (600001,A00001,A00002,A00003,A00004); sourceTree = "<group>"; };
+	A00006 = { isa = PBXGroup; name = Products; children = (600002); sourceTree = "<group>"; };
+
+	C00001 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (302001,402001,402002,402003,402004,402005,402006,402007,402008,402009,402010,402011); runOnlyForDeploymentPostprocessing = 0; };
+	C00002 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (202001); runOnlyForDeploymentPostprocessing = 0; };
+	C00003 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (502001,502002,502003,502004,502005,502006,502007,502008,502009,502010,502011,600003); runOnlyForDeploymentPostprocessing = 0; };
+
+	D01001 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_IDENTITY = "iPhone Developer"; "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer"; PROVISIONING_PROFILE = ""; }; name = Debug; };
+	D01002 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_IDENTITY = "iPhone Distribution"; "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer"; PROVISIONING_PROFILE = ""; }; name = Release; };
+
+	D02001 = { isa = XCBuildConfiguration; buildSettings = {
+			PRODUCT_NAME = ZillaLibSamples;
+			PRODUCT_BUNDLE_IDENTIFIER = org.zillalib.zillalibsamples;
+			INFOPLIST_FILE = "ZillaLibSamples-iOS.xcodeproj/Info.plist";
+			HEADER_SEARCH_PATHS = ../ZillaLib/Include;
+			OTHER_CFLAGS = ( "-DDEBUG", "-D_DEBUG", "-DZILLALOG" );
+			CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+			GCC_PREPROCESSOR_DEFINITIONS = $CmdLinePreprocessorDefinitions;
+			GCC_ENABLE_CPP_EXCEPTIONS = NO;
+			GCC_ENABLE_CPP_RTTI = NO;
+			GCC_OPTIMIZATION_LEVEL = 0;
+			COPY_PHASE_STRIP = NO;
+			ONLY_ACTIVE_ARCH = YES;
+			STRIP_INSTALLED_PRODUCT = NO;
+			CODE_SIGN_IDENTITY = "iPhone Developer";
+			ARCHS = armv7;
+			VALID_ARCHS = "armv7 i386";
+			IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+			TARGETED_DEVICE_FAMILY = "1,2";
+			IPHONE_OPTIMIZE_OPTIONS = "-skip-PNGs";
+			ENABLE_BITCODE = NO;
+			SDKROOT = iphoneos;
+			OBJROOT = "ZillaLibSamples-iOS.xcodeproj/Debug";
+			SYMROOT = "ZillaLibSamples-iOS.xcodeproj/Debug";
+			BUILD_DIR = "ZillaLibSamples-iOS.xcodeproj/Debug";
+			CONFIGURATION_BUILD_DIR = "ZillaLibSamples-iOS.xcodeproj/Debug";
+			CONFIGURATION_TEMP_DIR = "ZillaLibSamples-iOS.xcodeproj/Debug";
+			SHARED_PRECOMPS_DIR = "ZillaLibSamples-iOS.xcodeproj/Debug";
+		}; name = Debug; };
+
+	D02002 = { isa = XCBuildConfiguration; buildSettings = {
+			PRODUCT_NAME = ZillaLibSamples;
+			PRODUCT_BUNDLE_IDENTIFIER = org.zillalib.zillalibsamples;
+			INFOPLIST_FILE = "ZillaLibSamples-iOS.xcodeproj/Info.plist";
+			HEADER_SEARCH_PATHS = ../ZillaLib/Include;
+			OTHER_CFLAGS = ( "-DNDEBUG", "-fvisibility=hidden", "-ffunction-sections", "-fdata-sections" );
+			CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+			GCC_PREPROCESSOR_DEFINITIONS = $CmdLinePreprocessorDefinitions;
+			GCC_ENABLE_CPP_EXCEPTIONS = NO;
+			GCC_ENABLE_CPP_RTTI = NO;
+			DEAD_CODE_STRIPPING = YES;
+			DEPLOYMENT_POSTPROCESSING = YES;
+			CODE_SIGN_IDENTITY = "iPhone Distribution";
+			ARCHS = armv7;
+			VALID_ARCHS = "armv7 i386";
+			IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+			TARGETED_DEVICE_FAMILY = "1,2";
+			IPHONE_OPTIMIZE_OPTIONS = "-skip-PNGs";
+			ENABLE_BITCODE = NO;
+			STRIP_INSTALLED_PRODUCT = YES;
+			SDKROOT = iphoneos;
+			OBJROOT = "ZillaLibSamples-iOS.xcodeproj/Release";
+			SYMROOT = "ZillaLibSamples-iOS.xcodeproj/Release";
+			BUILD_DIR = "ZillaLibSamples-iOS.xcodeproj/Release";
+			CONFIGURATION_BUILD_DIR = "ZillaLibSamples-iOS.xcodeproj/Release";
+			CONFIGURATION_TEMP_DIR = "ZillaLibSamples-iOS.xcodeproj/Release";
+			SHARED_PRECOMPS_DIR = "ZillaLibSamples-iOS.xcodeproj/Release";
+		}; name = Release; };
+
+	E01000 = { isa = XCConfigurationList; buildConfigurations = (D01001,D01002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+	E02000 = { isa = XCConfigurationList; buildConfigurations = (D02001,D02002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+
+	F01000 = {
+		isa = PBXNativeTarget;
+		buildConfigurationList = E01000;
+		buildPhases = (C00001,C00002,C00003);
+		buildRules = ();
+		dependencies = (600006);
+		name = ZillaLibSamples;
+		productName = "___PROJECTNAME___";
+		productReference = 800000;
+		productType = "com.apple.product-type.application";
+	};
+
+	F02000 = {
+		isa = PBXProject;
+		attributes = { LastUpgradeCheck = 0700; };
+		buildConfigurationList = E02000;
+		compatibilityVersion = "Xcode 3.2";
+		developmentRegion = English;
+		hasScannedForEncodings = 1;
+		knownRegions = (en);
+		mainGroup = A00005;
+		projectReferences = ( { ProductGroup = A00006; ProjectRef = 600001; }, );
+		projectDirPath = "";
+		projectRoot = ..;
+		targets = (F01000);
+	};
+
+}; rootObject = F02000; }

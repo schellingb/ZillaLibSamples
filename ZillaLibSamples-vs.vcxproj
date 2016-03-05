@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectName>ZillaLibSamples</ProjectName>
+    <DataAssets>Data</DataAssets>
+    <ZillaLibDir>../ZillaLib</ZillaLibDir>
+    <ProjectGuid>{18D0229D-2CEF-9BE9-871F-84DB99F90690}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Emscripten-Debug|Win32">
+      <Configuration>Emscripten-Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Emscripten-Release|Win32">
+      <Configuration>Emscripten-Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="NACL-Debug|Win32">
+      <Configuration>NACL-Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="NACL-Release|Win32">
+      <Configuration>NACL-Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android-Debug|Win32">
+      <Configuration>Android-Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android-Release|Win32">
+      <Configuration>Android-Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(ZillaLibDir)\ZillaApp-vs.props" />
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="ZillaLibSampleMain.cpp" />
+    <None Include="01-empty-game.inl" />
+    <None Include="02-scene-manager-with-a-single-scene.inl" />
+    <None Include="03-scene-manager-with-two-scenes.inl" />
+    <None Include="04-scene-manager-with-crossfade.inl" />
+    <None Include="05-2d-geometry-drawing.inl" />
+    <None Include="06-input-and-other-events.inl" />
+    <None Include="07-surface-loading-and-drawing.inl" />
+    <None Include="08-rotating-and-scaling-surfaces.inl" />
+    <None Include="09-surface-batch-rendering.inl" />
+    <None Include="10-surface-with-repeating-texture.inl" />
+    <None Include="11-tiled-texture-surfaces.inl" />
+    <None Include="12-font-rendering.inl" />
+    <None Include="13-easing.inl" />
+    <None Include="14-timer.inl" />
+    <None Include="16-post-process-effect.inl" />
+    <None Include="17-surface-shader.inl" />
+    <None Include="18-render-clipping.inl" />
+    <None Include="19-render-to-texture.inl" />
+    <None Include="20-sound-samples.inl" />
+    <None Include="21-ImcSynthesizer-Sound.inl" />
+    <None Include="22-particles.inl" />
+    <None Include="23-networking-clientserver.inl" />
+    <None Include="24-networking-http.inl" />
+    <None Include="25-saving-loading-settings.inl" />
+    <None Include="26-open-web-link.inl" />
+    <None Include="27-json-read-write.inl" />
+    <None Include="28-advanced-polygon.inl" />
+    <None Include="29-blend-modes.inl" />
+    <None Include="30-simple-game.inl" />
+    <ResourceCompile Include="ZillaLibSamples.rc" />
+  </ItemGroup>
+</Project>

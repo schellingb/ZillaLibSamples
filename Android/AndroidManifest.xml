@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		package="org.zillalib.zillalibsamples"
+		android:versionCode="100" android:versionName="1.0">
+	<!-- uses-permission android:name="android.permission.INTERNET" / -->
+	<!-- uses-permission android:name="android.permission.VIBRATE" / -->
+	<uses-feature android:glEsVersion="0x00020000" />
+	<uses-feature android:name="android.hardware.touchscreen" />
+	<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="15" />
+	<supports-screens android:anyDensity="true" android:resizeable="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"></supports-screens>
+	<application android:label="ZillaLibSamples" android:icon="@drawable/icon"
+			android:debuggable="false" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+		<activity android:name=".ZillaLibSamples" android:label="ZillaLibSamples"
+				android:launchMode="singleTop" android:multiprocess="false" android:screenOrientation="sensor"
+				android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale|screenSize">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>
