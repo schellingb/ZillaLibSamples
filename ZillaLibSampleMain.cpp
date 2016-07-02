@@ -25,7 +25,8 @@
 using namespace std;
 
 #ifndef ZILLALIBSAMPLES_NUMBER
-#define ZILLALIBSAMPLES_NUMBER 21
+#define ZILLALIBSAMPLES_NUMBER 31
+#define ZILLALIBSAMPLES_HASDATA 1
 #endif
 
 #if defined(NDEBUG) && !defined(__SMARTPHONE__) && !defined(__WEBAPP__) && ZILLALIBSAMPLES_HASDATA
@@ -101,6 +102,8 @@ struct ZL_Display_Sample : public ZL_Display
 #include "29-blend-modes.inl"
 #elif ZILLALIBSAMPLES_NUMBER == 30
 #include "30-simple-game.inl"
+#elif ZILLALIBSAMPLES_NUMBER == 31
+#include "31-basic-3d.inl"
 #endif
 
 //Test compile all samples with ZILLALIBSAMPLES_NUMBER set to 0
