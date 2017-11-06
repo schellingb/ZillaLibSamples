@@ -54,7 +54,7 @@ struct sSceneGame : public ZL_Scene
 		RenderList.Add(mshSky, ZL_Matrix()); //always untransformed at the center
 		RenderList.Add(mshPlanet, ZL_Matrix::MakeRotateY(ZLSECONDS*.3f)); //at the center with a rotation based on time
 		RenderList.Add(mshSun, ZL_Matrix::MakeTranslate(Light.GetPosition())); //draw the sun at the lights position
-		ZL_Display3D::DrawListWithShadowMapping(RenderList, Camera, Light); //draw the list with shadow mapping
+		ZL_Display3D::DrawListWithLight(RenderList, Camera, Light); //draw the list with shadow mapping
 	}
 } SceneGame;
 
