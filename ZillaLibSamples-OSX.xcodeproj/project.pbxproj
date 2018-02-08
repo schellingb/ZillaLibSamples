@@ -32,6 +32,8 @@
 	101029 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "29-blend-modes.inl"; sourceTree = "<group>"; };
 	101030 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "30-simple-game.inl"; sourceTree = "<group>"; };
 	101031 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "31-basic-3d.inl"; sourceTree = "<group>"; };
+	101032 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "32-3d-materials.inl"; sourceTree = "<group>"; };
+	101033 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "33-3d-particles.inl"; sourceTree = "<group>"; };
 
 	202001 = { isa = PBXBuildFile; fileRef = 201001; }; 201001 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "ZillaLibSampleMain.cpp"; sourceTree = "<group>"; };
 
@@ -58,7 +60,7 @@
 	800000 = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZillaLibSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 
 	A00001 = { isa = PBXGroup; name = Products; children = (800000); sourceTree = "<group>"; };
-	A00002 = { isa = PBXGroup; name = Sources; children = (101001,101002,101003,101004,101005,101006,101007,101008,101009,101010,101011,101012,101013,101014,101015,101016,101017,101018,101019,101020,101021,101022,101023,101024,101025,101026,101027,101028,101029,101030,101031,201001); sourceTree = "<group>"; };
+	A00002 = { isa = PBXGroup; name = Sources; children = (101001,101002,101003,101004,101005,101006,101007,101008,101009,101010,101011,101012,101013,101014,101015,101016,101017,101018,101019,101020,101021,101022,101023,101024,101025,101026,101027,101028,101029,101030,101031,101032,101033,201001); sourceTree = "<group>"; };
 	A00003 = { isa = PBXGroup; name = Resources; children = (301001,401001); sourceTree = "<group>"; };
 	A00004 = { isa = PBXGroup; name = Frameworks; children = (501001,501002,501003,501004,501005,501006,501007); sourceTree = "<group>"; };
 	A00005 = { isa = PBXGroup; name = CustomTemplate; children = (600001,A00001,A00002,A00003,A00004); sourceTree = "<group>"; };

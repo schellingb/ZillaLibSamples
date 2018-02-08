@@ -3,7 +3,9 @@ import os, glob, sys, subprocess, zipfile, shutil, time
 #read MSBUILD_PATH, OUT_DIR and ANDROID_* variables for signing APK files from external file 'build-all.cfg' (not checked into version control)
 MSBUILD_PATH = 'C:/Program Files (x86)/MSBuild/12.0/Bin/MSBuild.exe'
 OUT_DIR = 'Builds'
+WEB_GZ = False
 exec (file('build-all.cfg').read() if os.path.exists('build-all.cfg') else '')
+WEB_GZ = ('.gz' if WEB_GZ else '')
 
 #check if directories for unused assets already exist, abort if so
 assert not os.path.exists('Data-Unused'), 'Temporary asset directory "' + 'Data-Unused' + '" still exists, please check (crashed when executed last time?)'
@@ -40,9 +42,12 @@ for num in range(1, 99):
 		if not inl: continue
 		inlcode = file(inl).read()
 		oneasset = ''
+		print '---------------------------------------------------------------------------------------------------------------------------------------------------------------------'
+		print '[ASSETS] Building Sample',num,'("' + inl + '"):'
 		for asset in assets:
 			if (asset[0] in inlcode):
 				os.rename(asset[1], asset[0])
+				print '    Used Asset:',asset[0]
 				oneasset = asset[0]
 		if oneasset: os.utime(oneasset, None) #touch asset file so assets get rebuilt
 
@@ -80,16 +85,16 @@ for num in range(1, 99):
 			return is_rebuild or not os.path.exists(OUT_DIR+'/'+trg) or os.path.getmtime(OUT_DIR+'/'+trg) < os.path.getmtime(inl)
 
 		if sys.platform == 'win32':
-			if buildcheck('emscripten', 'ZillaLibSample-' + snum + '.js.gz'):
+			if buildcheck('emscripten', 'ZillaLibSample-' + snum + '.js'+WEB_GZ):
 				buildheader('EMSCRIPTEN')
-				building(['make', '-j', '4', 'emscripten-release', '-B', 'D=ZILLALIBSAMPLES_NUMBER=' + str(num), 'W=ZillaLibSampleMain.cpp' + (' ' + oneasset if oneasset else '')])
-				buildcopy('Release-emscripten/ZillaLibSamples' + ('_WithData' if oneasset else '') + '.js.gz', 'ZillaLibSample-' + snum + '.js.gz')
+				building(['make', '-j', '4', 'emscripten-release', 'D=ZILLALIBSAMPLES_NUMBER=' + str(num), 'W=ZillaLibSampleMain.cpp' + (' ' + oneasset if oneasset else '')])
+				buildcopy('Release-emscripten/ZillaLibSamples' + ('_WithData' if oneasset else '') + '.js'+WEB_GZ, 'ZillaLibSample-' + snum + '.js'+WEB_GZ)
 				buildfooter()
 
-			if buildcheck('nacl', 'ZillaLibSample-' + snum + '.pexe.gz'):
+			if buildcheck('nacl', 'ZillaLibSample-' + snum + '.pexe'+WEB_GZ):
 				buildheader('NACL')
-				building(['make', '-j', '4', 'nacl-release', '-B', 'D=ZILLALIBSAMPLES_NUMBER=' + str(num), 'W=ZillaLibSampleMain.cpp' + (' '+oneasset if oneasset else '')])
-				buildcopy('Release-nacl/ZillaLibSamples' + ('_WithData' if oneasset else '') + '.pexe.gz', 'ZillaLibSample-' + snum + '.pexe.gz')
+				building(['make', '-j', '4', 'nacl-release', 'D=ZILLALIBSAMPLES_NUMBER=' + str(num), 'W=ZillaLibSampleMain.cpp' + (' '+oneasset if oneasset else '')])
+				buildcopy('Release-nacl/ZillaLibSamples' + ('_WithData' if oneasset else '') + '.pexe'+WEB_GZ, 'ZillaLibSample-' + snum + '.pexe'+WEB_GZ)
 				buildfooter()
 
 			if buildcheck('android', 'ZillaLibSample-' + snum + '.apk'):

@@ -11,6 +11,7 @@
 #include <ZL_Font.h>
 #include <ZL_Scene.h>
 #include <ZL_Input.h>
+#include <ZL_Display3D.h>
 #include <ZL_Timer.h>
 #include <ZL_Particles.h>
 #include <ZL_Math.h>
@@ -25,7 +26,7 @@
 using namespace std;
 
 #ifndef ZILLALIBSAMPLES_NUMBER
-#define ZILLALIBSAMPLES_NUMBER 31
+#define ZILLALIBSAMPLES_NUMBER 33
 #define ZILLALIBSAMPLES_HASDATA 1
 #endif
 
@@ -104,6 +105,10 @@ struct ZL_Display_Sample : public ZL_Display
 #include "30-simple-game.inl"
 #elif ZILLALIBSAMPLES_NUMBER == 31
 #include "31-basic-3d.inl"
+#elif ZILLALIBSAMPLES_NUMBER == 32
+#include "32-3d-materials.inl"
+#elif ZILLALIBSAMPLES_NUMBER == 33
+#include "33-3d-particles.inl"
 #endif
 
 //Test compile all samples with ZILLALIBSAMPLES_NUMBER set to 0

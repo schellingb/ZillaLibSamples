@@ -1,9 +1,7 @@
-#include <ZL_Display3D.h>
-
 enum { SCENE_GAME = 1 };
-static ZL_Mesh mshPlanet, mshSun, mshSky;
 static ZL_Camera Camera;
 static ZL_Light Light;
+static ZL_Mesh mshPlanet, mshSun, mshSky;
 static ZL_RenderList RenderList;
 static float CameraDistance = 3.0f;
 
@@ -18,13 +16,13 @@ struct sSceneGame : public ZL_Scene
 
 		//Create a material for the planet which uses the vertex colors defined in the model data and renders it with the shadow mapping with a lot of shininess
 		using namespace ZL_MaterialModes;
-		mshPlanet.SetMaterial(ZL_Material(MM_VERTEXCOLOR | MM_LIT | MM_SPECULARSTATIC | MM_SHADOWMAP).SetUniformFloat(Z3U_SPECULAR, 1.0f).SetUniformFloat(Z3U_SHININESS, 16.0f));
+		mshPlanet.SetMaterial(ZL_Material(MM_VERTEXCOLOR | MM_SPECULARSTATIC).SetUniformFloat(Z3U_SPECULAR, 1.0f).SetUniformFloat(Z3U_SHININESS, 16.0f));
 
 		//Make a sphere mesh for the sun and set its material as unlit glowing orange
-		mshSun = ZL_Mesh::BuildSphere(1, 23).SetMaterial(0, ZL_Material(MM_STATICCOLOR).SetUniformVec4(Z3U_COLOR, ZL_Color::Orange));
+		mshSun = ZL_Mesh::BuildSphere(1, 23).SetMaterial(0, ZL_Material(MM_STATICCOLOR | MO_UNLIT | MO_CASTNOSHADOW).SetUniformVec4(Z3U_COLOR, ZL_Color::Orange));
 
 		//Make an inverted sphere for the background sky map with a custom shaded material that draws noise as stars
-		mshSky = ZL_Mesh::BuildSphere(20, 20, true).SetMaterial(0, ZL_Material(MM_DIFFUSEFUNC | MR_TEXCOORD,
+		mshSky = ZL_Mesh::BuildSphere(20, 20, true).SetMaterial(0, ZL_Material(MM_DIFFUSEFUNC | MR_TEXCOORD | MO_UNLIT | MO_CASTNOSHADOW,
 			ZL_GLSL_IMPORTSNOISE()
 			"vec4 CalcDiffuse()"
 			"{"
@@ -33,8 +31,8 @@ struct sSceneGame : public ZL_Scene
 			"}"
 		));
 
-		//set up the light position direction and color
-		Light.SetPosition(ZL_Vector3(0, 0, 15.0f)).SetDirection(ZL_Vector3(0, 0, -1.0f)).SetColor(ZLRGB(1,1,.9));
+		//set up the light position, direction and color
+		Light.SetLookAt(ZL_Vector3(0, 15.0f, 0), ZL_Vector3::Zero).SetDirectionalLight(2.f).SetColor(ZLRGB(1,1,.9));
 	}
 
 	virtual void Draw()
@@ -51,8 +49,8 @@ struct sSceneGame : public ZL_Scene
 
 		//Setup and draw our dynamic render list with our three meshes
 		RenderList.Reset();
-		RenderList.Add(mshSky, ZL_Matrix()); //always untransformed at the center
-		RenderList.Add(mshPlanet, ZL_Matrix::MakeRotateY(ZLSECONDS*.3f)); //at the center with a rotation based on time
+		RenderList.Add(mshSky, ZL_Matrix::Identity); //always untransformed at the center
+		RenderList.Add(mshPlanet, ZL_Matrix::MakeRotateZ(ZLSECONDS*.3f)); //at the center with a rotation based on time
 		RenderList.Add(mshSun, ZL_Matrix::MakeTranslate(Light.GetPosition())); //draw the sun at the lights position
 		ZL_Display3D::DrawListWithLight(RenderList, Camera, Light); //draw the list with shadow mapping
 	}
