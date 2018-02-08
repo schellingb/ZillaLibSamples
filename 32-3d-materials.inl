@@ -29,23 +29,18 @@ struct sMain : public ZL_Application
 		ZL_Material matGround(MM_DIFFUSEFUNC | MR_TEXCOORD | MR_NORMAL | MR_CAMERATANGENT | MR_TIME | MO_PRECISIONTANGENT, 
 			ZL_GLSL_IMPORTSNOISE()
 
-			"float Grass(vec2 p, float z)"
-			"{"
-				"p *= 150.;"
-				"return (max(snoise(p) - z, 0.) + max(snoise(p+1234.) - z, 0.) + max(snoise(p+5678.) - z, 0.) + max(snoise(p+9999.) - z, 0.)) / (1. - z) / 4.;"
-			"}"
-
 			"vec4 CalcDiffuse()"
 			"{"
-				"float dist = length(" Z3U_VIEWPOS " - " Z3V_POSITION ");"
-				"vec2 view_offset = (" Z3S_CAMERATANGENT ".xy / " Z3S_CAMERATANGENT ".z) * 0.025;"
+				"vec2 pbase = " Z3V_TEXCOORD " * 150., view_offset = (" Z3S_CAMERATANGENT ".xy / " Z3S_CAMERATANGENT ".z) * -4.;"
 
 				"float n = 0.;"
-				"for (float f = 0.; f < 1.005; f+=0.02)"
-					"n = n * .8 + Grass(" Z3V_TEXCOORD " - f * view_offset, f);"
-				"n = min(n * 7., 1.);"
-				"if (dist > 30.0) n = n / (dist / 30.0);"
-
+				"for (float z = 0.; z < .999; z+=.1)"
+				"{"
+					"vec2 p = pbase + view_offset * z;"
+					"float grass = max(snoise(p) - z, 0.) + max(snoise(p+1277.) - z, 0.) + max(snoise(p+5737.) - z, 0.);"
+					"n = n * .7 + (grass / (1. - z));"
+				"}"
+				"n = min(n * .5, 1.);"
 				"return vec4(vec3(n * (0.25 + snoise(" Z3V_TEXCOORD " * 100.) * .5), .2 + n * .75 ,0.), 1.);"
 			"}"
 		);
