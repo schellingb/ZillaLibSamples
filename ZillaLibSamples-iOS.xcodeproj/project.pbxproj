@@ -13,8 +13,8 @@
 	101010 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "10-surface-with-repeating-texture.inl"; sourceTree = "<group>"; };
 	101011 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "11-tiled-texture-surfaces.inl"; sourceTree = "<group>"; };
 	101012 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "12-font-rendering.inl"; sourceTree = "<group>"; };
-	101013 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "13-easing.inl "; sourceTree = "<group>"; };
-	101014 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "14-timer.inl *"; sourceTree = "<group>"; };
+	101013 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "13-easing.inl"; sourceTree = "<group>"; };
+	101014 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "14-timer.inl"; sourceTree = "<group>"; };
 	101015 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "15-collision-tests.inl"; sourceTree = "<group>"; };
 	101016 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "16-post-process-effect.inl"; sourceTree = "<group>"; };
 	101017 = { isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "17-surface-shader.inl"; sourceTree = "<group>"; };
