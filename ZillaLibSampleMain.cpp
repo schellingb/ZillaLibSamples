@@ -26,7 +26,7 @@
 using namespace std;
 
 #ifndef ZILLALIBSAMPLES_NUMBER
-#define ZILLALIBSAMPLES_NUMBER 33
+#define ZILLALIBSAMPLES_NUMBER 34
 #define ZILLALIBSAMPLES_HASDATA 1
 #endif
 
@@ -109,6 +109,8 @@ struct ZL_Display_Sample : public ZL_Display
 #include "32-3d-materials.inl"
 #elif ZILLALIBSAMPLES_NUMBER == 33
 #include "33-3d-particles.inl"
+#elif ZILLALIBSAMPLES_NUMBER == 34
+#include "34-skeletal-mesh-ik.inl"
 #endif
 
 //Test compile all samples with ZILLALIBSAMPLES_NUMBER set to 0
@@ -162,6 +164,7 @@ namespace NS01 {
 #undef SCENE_GAME
 };namespace NS17 {
 #include "17-surface-shader.inl"
+#undef SCENE_GAME
 };namespace NS18 {
 #include "18-render-clipping.inl"
 };namespace NS19 {
@@ -186,6 +189,15 @@ namespace NS01 {
 #include "28-advanced-polygon.inl"
 };namespace NS29 {
 #include "29-blend-modes.inl"
+};namespace NS30 {
+#include "30-simple-game.inl"
+};namespace NS31 {
+#include "31-basic-3d.inl"
+};namespace NS32 {
+#include "32-3d-materials.inl"
+};namespace NS33 {
+#include "33-3d-particles.inl"
+};namespace NS34 {
+#include "34-skeletal-mesh-ik.inl"
 };
-
 #endif

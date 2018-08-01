@@ -85,6 +85,7 @@
     <None Include="31-basic-3d.inl" />
     <None Include="32-3d-materials.inl" />
     <None Include="33-3d-particles.inl" />
+    <None Include="34-skeletal-mesh-ik.inl" />
     <ResourceCompile Include="ZillaLibSamples.rc" />
   </ItemGroup>
 </Project>

@@ -10,7 +10,7 @@ struct sMain : public ZL_Application
 	void Load(int argc, char *argv[])
 	{
 		//Initialize the game with depth buffer, 3d rendering and shadow mapping
-		ZL_Display::Init("Advanced 3D Materials", 1280, 720, ZL_DISPLAY_ALLOWRESIZEHORIZONTAL | ZL_DISPLAY_DEPTHBUFFER);
+		ZL_Display::Init("Advanced 3D Materials", 1280, 720, ZL_DISPLAY_DEPTHBUFFER);
 		ZL_Display3D::Init();
 		ZL_Display3D::InitShadowMapping();
 		ZL_Input::Init();
