@@ -76,11 +76,11 @@
 			if [ \"$CONFIGURATION\" != \"Release\" ]; then exit; fi #only perform in Release builds
 			$TOOLCHAIN_DIR/usr/bin/strip $TARGET_BUILD_DIR/$EXECUTABLE_PATH #manual strip because regular strip can't run after appending zip
 			cd $TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH
-			zip -0 -m -r - * -x AppIcon.icns | cat >> $TARGET_BUILD_DIR/$EXECUTABLE_PATH
+			zip -0 -m -r - * -x AppIcon.icns -x Assets.car | cat >> $TARGET_BUILD_DIR/$EXECUTABLE_PATH
 		"; };
 
-	D01001 = { isa = XCBuildConfiguration; buildSettings = {}; name = Debug; };
-	D01002 = { isa = XCBuildConfiguration; buildSettings = {}; name = Release; };
+	D01001 = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_OBJC_WEAK = YES; PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}"; }; name = Debug; };
+	D01002 = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_OBJC_WEAK = YES; PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}"; }; name = Release; };
 
 	D02001 = { isa = XCBuildConfiguration; buildSettings = {
 			PRODUCT_NAME = ZillaLibSamples;
@@ -90,6 +90,7 @@
 			HEADER_SEARCH_PATHS = ../ZillaLib/Include;
 			OTHER_CFLAGS = ( "-DDEBUG", "-D_DEBUG", "-DZILLALOG" );
 			CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+			CLANG_CXX_LIBRARY = "libc++";
 			GCC_PREPROCESSOR_DEFINITIONS = $CmdLinePreprocessorDefinitions;
 			GCC_ENABLE_CPP_EXCEPTIONS = NO;
 			GCC_ENABLE_CPP_RTTI = NO;
@@ -97,7 +98,7 @@
 			COPY_PHASE_STRIP = NO;
 			ONLY_ACTIVE_ARCH = YES;
 			STRIP_INSTALLED_PRODUCT = NO;
-			MACOSX_DEPLOYMENT_TARGET = 10.5;
+			MACOSX_DEPLOYMENT_TARGET = 10.7;
 			SDKROOT = macosx;
 			OBJROOT = "ZillaLibSamples-OSX.xcodeproj/Debug";
 			SYMROOT = "ZillaLibSamples-OSX.xcodeproj/Debug";
@@ -105,6 +106,8 @@
 			CONFIGURATION_BUILD_DIR = "ZillaLibSamples-OSX.xcodeproj/Debug";
 			CONFIGURATION_TEMP_DIR = "ZillaLibSamples-OSX.xcodeproj/Debug";
 			SHARED_PRECOMPS_DIR = "ZillaLibSamples-OSX.xcodeproj/Debug";
+			ALWAYS_SEARCH_USER_PATHS = NO;
+			ENABLE_TESTABILITY = YES;
 		}; name = Debug; };
 
 	D02002 = { isa = XCBuildConfiguration; buildSettings = {
@@ -115,13 +118,14 @@
 			HEADER_SEARCH_PATHS = ../ZillaLib/Include;
 			OTHER_CFLAGS = ( "-DNDEBUG", "-fvisibility=hidden", "-ffunction-sections", "-fdata-sections" );
 			CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+			CLANG_CXX_LIBRARY = "libc++";
 			GCC_PREPROCESSOR_DEFINITIONS = $CmdLinePreprocessorDefinitions;
 			GCC_ENABLE_CPP_EXCEPTIONS = NO;
 			GCC_ENABLE_CPP_RTTI = NO;
 			DEAD_CODE_STRIPPING = YES;
 			DEPLOYMENT_POSTPROCESSING = YES;
 			STRIP_INSTALLED_PRODUCT = NO;
-			MACOSX_DEPLOYMENT_TARGET = 10.5;
+			MACOSX_DEPLOYMENT_TARGET = 10.7;
 			SDKROOT = macosx;
 			OBJROOT = "ZillaLibSamples-OSX.xcodeproj/Release";
 			SYMROOT = "ZillaLibSamples-OSX.xcodeproj/Release";
@@ -129,6 +133,7 @@
 			CONFIGURATION_BUILD_DIR = "ZillaLibSamples-OSX.xcodeproj/Release";
 			CONFIGURATION_TEMP_DIR = "ZillaLibSamples-OSX.xcodeproj/Release";
 			SHARED_PRECOMPS_DIR = "ZillaLibSamples-OSX.xcodeproj/Release";
+			ALWAYS_SEARCH_USER_PATHS = NO;
 		}; name = Release; };
 
 	E01000 = { isa = XCConfigurationList; buildConfigurations = (D01001,D01002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
@@ -148,7 +153,7 @@
 
 	F02000 = {
 		isa = PBXProject;
-		attributes = { LastUpgradeCheck = 0700; };
+		attributes = { LastUpgradeCheck = 1010; };
 		buildConfigurationList = E02000;
 		compatibilityVersion = "Xcode 3.2";
 		developmentRegion = English;

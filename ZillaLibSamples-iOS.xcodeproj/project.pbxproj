@@ -85,8 +85,8 @@
 	C00002 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (202001); runOnlyForDeploymentPostprocessing = 0; };
 	C00003 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (502001,502002,502003,502004,502005,502006,502007,502008,502009,502010,502011,600003); runOnlyForDeploymentPostprocessing = 0; };
 
-	D01001 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_IDENTITY = "iPhone Developer"; "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer"; PROVISIONING_PROFILE = ""; }; name = Debug; };
-	D01002 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_IDENTITY = "iPhone Distribution"; "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer"; PROVISIONING_PROFILE = ""; }; name = Release; };
+	D01001 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_IDENTITY = "iPhone Developer"; "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer"; PROVISIONING_PROFILE = ""; PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}"; CLANG_ENABLE_OBJC_WEAK = YES; }; name = Debug; };
+	D01002 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_IDENTITY = "iPhone Distribution"; "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer"; PROVISIONING_PROFILE = ""; PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}"; CLANG_ENABLE_OBJC_WEAK = YES; }; name = Release; };
 
 	D02001 = { isa = XCBuildConfiguration; buildSettings = {
 			PRODUCT_NAME = ZillaLibSamples;
@@ -103,9 +103,7 @@
 			ONLY_ACTIVE_ARCH = YES;
 			STRIP_INSTALLED_PRODUCT = NO;
 			CODE_SIGN_IDENTITY = "iPhone Developer";
-			ARCHS = armv7;
-			VALID_ARCHS = "armv7 i386";
-			IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+			IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 			TARGETED_DEVICE_FAMILY = "1,2";
 			IPHONE_OPTIMIZE_OPTIONS = "-skip-PNGs";
 			ENABLE_BITCODE = NO;
@@ -116,6 +114,8 @@
 			CONFIGURATION_BUILD_DIR = "ZillaLibSamples-iOS.xcodeproj/Debug";
 			CONFIGURATION_TEMP_DIR = "ZillaLibSamples-iOS.xcodeproj/Debug";
 			SHARED_PRECOMPS_DIR = "ZillaLibSamples-iOS.xcodeproj/Debug";
+			ALWAYS_SEARCH_USER_PATHS = NO;
+			ENABLE_TESTABILITY = YES;
 		}; name = Debug; };
 
 	D02002 = { isa = XCBuildConfiguration; buildSettings = {
@@ -131,9 +131,7 @@
 			DEAD_CODE_STRIPPING = YES;
 			DEPLOYMENT_POSTPROCESSING = YES;
 			CODE_SIGN_IDENTITY = "iPhone Distribution";
-			ARCHS = armv7;
-			VALID_ARCHS = "armv7 i386";
-			IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+			IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 			TARGETED_DEVICE_FAMILY = "1,2";
 			IPHONE_OPTIMIZE_OPTIONS = "-skip-PNGs";
 			ENABLE_BITCODE = NO;
@@ -145,6 +143,7 @@
 			CONFIGURATION_BUILD_DIR = "ZillaLibSamples-iOS.xcodeproj/Release";
 			CONFIGURATION_TEMP_DIR = "ZillaLibSamples-iOS.xcodeproj/Release";
 			SHARED_PRECOMPS_DIR = "ZillaLibSamples-iOS.xcodeproj/Release";
+			ALWAYS_SEARCH_USER_PATHS = NO;
 		}; name = Release; };
 
 	E01000 = { isa = XCConfigurationList; buildConfigurations = (D01001,D01002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
@@ -164,7 +163,7 @@
 
 	F02000 = {
 		isa = PBXProject;
-		attributes = { LastUpgradeCheck = 0700; };
+		attributes = { LastUpgradeCheck = 1010; };
 		buildConfigurationList = E02000;
 		compatibilityVersion = "Xcode 3.2";
 		developmentRegion = English;
