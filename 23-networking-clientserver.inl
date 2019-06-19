@@ -11,7 +11,7 @@ struct sSceneMain : public ZL_Scene
 	{
 		ZL_Display::ClearFill(ZL_Color::Black);
 		fnt.Draw(20.0f, 240.0f,
-			"On platforms with no direct udp socket access (NaCl, Emscripten) the macro ZL_NO_SOCKETS is set." "\n"
+			"On platforms with no direct udp socket access (web) the macro ZL_NO_SOCKETS is set." "\n"
 			"On there we can't use the client/server model. Async HTTP connections are available everywhere");
 	}
 #else

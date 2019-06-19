@@ -23,7 +23,7 @@ linux_cpu_type = 'x86_64' if sys.maxsize > 2**32 else 'x86_32'
 
 #options
 is_rebuild = 'rebuild' in sys.argv
-select_targets = [k for k in sys.argv if k in ['emscripten','nacl','android','win32','win64','linux','osx']]
+select_targets = [k for k in sys.argv if k in ['wasm','emscripten','nacl','android','win32','win64','linux','osx']]
 
 #create directories for unused assets while building samples that don't need them, and at first move all assets over
 for asset in assets:
@@ -85,6 +85,12 @@ for num in range(1, 99):
 			return is_rebuild or not os.path.exists(OUT_DIR+'/'+trg) or os.path.getmtime(OUT_DIR+'/'+trg) < os.path.getmtime(inl)
 
 		if sys.platform == 'win32':
+			if buildcheck('wasm', 'ZillaLibSample-' + snum + '.js'+WEB_GZ):
+				buildheader('WEBASSEMBLY')
+				building(['make', '-j', '4', 'wasm-release', 'D=ZILLALIBSAMPLES_NUMBER=' + str(num), 'W=ZillaLibSampleMain.cpp' + (' ' + oneasset if oneasset else '')])
+				buildcopy('Release-wasm/ZillaLibSamples.js'+WEB_GZ, 'ZillaLibSample-' + snum + '.js'+WEB_GZ)
+				buildfooter()
+
 			if buildcheck('emscripten', 'ZillaLibSample-' + snum + '.js'+WEB_GZ):
 				buildheader('EMSCRIPTEN')
 				building(['make', '-j', '4', 'emscripten-release', 'D=ZILLALIBSAMPLES_NUMBER=' + str(num), 'W=ZillaLibSampleMain.cpp' + (' ' + oneasset if oneasset else '')])

@@ -23,6 +23,14 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="WebAssembly-Debug|Win32">
+      <Configuration>WebAssembly-Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="WebAssembly-Release|Win32">
+      <Configuration>WebAssembly-Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Emscripten-Debug|Win32">
       <Configuration>Emscripten-Debug</Configuration>
       <Platform>Win32</Platform>
