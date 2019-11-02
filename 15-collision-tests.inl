@@ -8,7 +8,7 @@ struct sMain : public ZL_Application
 		ZL_Input::Init();
 	}
 
-	void BeforeFrame()
+	void AfterFrame()
 	{
 		ZL_Display::ClearFill(ZLBLACK);
 		if (ZL_Input::Down()) { c1 = c2; c2 = ZL_Display::PointerPos(); }

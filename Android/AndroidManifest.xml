@@ -6,7 +6,7 @@
 	<!-- uses-permission android:name="android.permission.VIBRATE" / -->
 	<uses-feature android:glEsVersion="0x00020000" />
 	<uses-feature android:name="android.hardware.touchscreen" />
-	<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="15" />
+	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29" />
 	<supports-screens android:anyDensity="true" android:resizeable="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"></supports-screens>
 	<application android:label="ZillaLibSamples" android:icon="@drawable/icon"
 			android:debuggable="false" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">

@@ -24,6 +24,7 @@ linux_cpu_type = 'x86_64' if sys.maxsize > 2**32 else 'x86_32'
 #options
 is_rebuild = 'rebuild' in sys.argv
 select_targets = [k for k in sys.argv if k in ['wasm','emscripten','nacl','android','win32','win64','linux','osx']]
+if select_targets == []: select_targets = ['wasm','android','win32','win64','linux','osx']
 
 #create directories for unused assets while building samples that don't need them, and at first move all assets over
 for asset in assets:

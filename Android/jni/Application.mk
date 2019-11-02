@@ -1,2 +1,4 @@
-# APP_ABI := armeabi armeabi-v7a #enable on performance issues
-# APP_OPTIM := debug # better set android:debuggable in manifest
+# This selects build targets for release builds
+# Debug builds only build the first listed target
+APP_ABI := armeabi-v7a arm64-v8a
+#APP_ABI := armeabi-v7a arm64-v8a x86 x86_64
