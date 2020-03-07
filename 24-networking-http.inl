@@ -49,7 +49,6 @@ struct sSceneMain : public ZL_Scene
 			Message("Requesting text data...");
 			http = ZL_HttpConnection("http://zillalib.github.io/TEST.TXT");
 			http.sigReceivedString().connect(this, &sSceneMain::OnHttpResponseString);
-			http.Connect();
 		}
 
 		if (Button(ZL_Rectf::BySize(474.0f, 40.0f, 300.0f, 60.0f), "Request PNG image over HTTP"))
@@ -58,7 +57,6 @@ struct sSceneMain : public ZL_Scene
 			Message("Requesting png data...");
 			http = ZL_HttpConnection("http://zillalib.github.io/TEST.PNG");
 			http.sigReceivedData().connect(this, &sSceneMain::OnHttpResponsePng);
-			http.Connect();
 		}
 
 		srfReceivedImage.Draw(427.0f, 70.0f);

@@ -8,7 +8,7 @@ struct sSceneGame : public ZL_Scene
 
 	//Clear screen and draw some fonts
 	void Draw()
-	{
+	{  
 		ZL_Display::ClearFill(ZL_Color::Black);
 		fntTex.Draw(20, 450, "Bitmap Font Text");
 		fntTex.Draw(ZLHALFW, 420, "Centered Text", ZL_Origin::BottomCenter);
@@ -33,7 +33,7 @@ struct sMain : public ZL_Application
 	{
 		ZL_Display::Init("Font Rendering", 854, 480);
 		fntTex = ZL_Font("Data/fntMain.png");
-		fntTTF = ZL_Font("Data/alphabot.ttf.zip", 55).SetCharSpacing(5);
+		fntTTF = ZL_Font("Data/alphabot.ttf.zip", 54);
 		ZL_SceneManager::Init(SCENE_GAME);
 	}
 } Main;

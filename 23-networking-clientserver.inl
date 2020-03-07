@@ -20,10 +20,10 @@ struct sSceneMain : public ZL_Scene
 	ZL_Client client;
 
 	//Events listening to the networking events from server and client
-	void OnServerConnect(ZL_Peer &peer)            { Message(ZL_String::format("Server: Connect From: %x", peer.host)); }
-	void OnServerDisconnect(ZL_Peer &peer)         { Message(ZL_String::format("Server: Disconnected Client: %x", peer.host)); }
-	void OnServerReceive(ZL_Peer &p, ZL_Packet &d) { Message(ZL_String::format("Server: Got: [%.*s] From: %x", d.length, d.data, p.host)); }
-	void OnClientDisconnect()                      { Message("Client: Disconnected"); }
+	void OnServerConnect(const ZL_Peer &peer)                      { Message(ZL_String::format("Server: Connect From: %x", peer.host)); }
+	void OnServerDisconnect(const ZL_Peer &peer, unsigned int msg) { Message(ZL_String::format("Server: Disconnected Client: %x (CloseMsg %d)", peer.host, msg)); }
+	void OnServerReceive(const ZL_Peer &p, ZL_Packet &d)           { Message(ZL_String::format("Server: Got: [%.*s] From: %x", d.length, d.data, p.host)); }
+	void OnClientDisconnect(unsigned int closemsg)                 { Message(ZL_String::format("Client: Disconnected (CloseMsg %d)", closemsg)); }
 
 	//As soon as the client is connected to the server, send a hello mesasge
 	void OnClientConnect()
@@ -53,7 +53,7 @@ struct sSceneMain : public ZL_Scene
 		{
 			if (server.IsOpened())
 			{
-				server.Close();
+				server.Close(2222);
 				Message("Server: Stopped");
 			}
 			else
@@ -71,7 +71,7 @@ struct sSceneMain : public ZL_Scene
 			if (client.IsConnected())
 			{
 				Message("Client: Disconnecting...");
-				client.Disconnect();
+				client.Disconnect(1111);
 			}
 			else
 			{
